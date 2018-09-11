@@ -29,11 +29,32 @@ var server = http.createServer(function(req, res) {
     req.on('end', function() {
         buffer += decoder.end();
 
-        // send the response
-        res.end('Hello World\n');
+        // choose the handler or notFound
+        var chosenHandler = typeof (router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : handlers.notFound;
 
-        // log the request path
-        console.log('payload', buffer);
+        // data obj to handler
+        var data = {
+            'trimmedPath': trimmedPath,
+            'queryStringObject': queryStringObject,
+            'method': method,
+            'payload': buffer
+        }
+
+        // route the request to the handler
+        chosenHandler(data, function(statusCode, payload) {
+            statusCode = typeof (statusCode) == 'number' ? statusCode : 200;
+
+            payload = typeof (payload) == 'object' ? payload : {};
+
+            var payloadString = JSON.stringify(payload);
+
+            // send the response
+            res.writeHead(statusCode);
+            res.end(payloadString);
+
+            // log the request path
+            console.log('response', statusCode, payloadString);
+        });
     });
 
 });
@@ -42,3 +63,25 @@ var server = http.createServer(function(req, res) {
 server.listen(3000, function() {
     console.log('listening on 3000...');
 });
+
+// define the hendlers
+var handlers = {};
+
+// sample handler
+handlers.sample = function(data, callback) {
+    // callback http status code and payload
+    callback(406, { 'name': 'sample handler' });
+}
+
+// not found handler
+handlers.notFound = function(data, callback) {
+    callback(404);
+}
+
+// define a request router
+var router = {
+    'sample': handlers.sample
+}
+
+
+
