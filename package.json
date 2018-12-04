@@ -1,0 +1,25 @@
+{
+  "name": "rest_api_pure-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmytro9/rest-api_pure_node.git"
+  },
+  "author": "Dmytro Poliuliuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmytro9/rest-api_pure_node/issues"
+  },
+  "homepage": "https://github.com/Dmytro9/rest-api_pure_node#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
