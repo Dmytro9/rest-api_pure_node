@@ -68,7 +68,8 @@ var unifiedServer = function (req, res) {
 			'trimmedPath': trimmedPath,
 			'queryStringObject': queryStringObject,
 			'method': method,
-			'payload': helpers.parseJsonToObject(buffer)
+			'payload': helpers.parseJsonToObject(buffer),
+			'headers': headers
 		}
 
 		// route the request to the handler
