@@ -1,7 +1,1 @@
-{
-  "firstName": "Dima",
-  "lastName": "Pol",
-  "phone": "1234567891",
-  "hashPassword": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
-  "tosAgreement": true
-}
+{"firstName":"Dima","lastName":"Pol","phone":"1234567891","hashPassword":"9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08","tosAgreement":true,"checks":["qom9ged33l099xcfbhwz","jd8gbth36ygh1tep5wjd","imuy0rg61v9h13fb4r7z","zaig7svc5ort8kxtzdp7","3knzk5bq04r2kwkkkrg0"]}
