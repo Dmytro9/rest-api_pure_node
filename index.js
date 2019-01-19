@@ -7,6 +7,9 @@ var config = require('./config');
 var handlers = require('./lib/handlers');
 var helpers = require('./lib/helpers');
 
+// helpers.sendTwilioSms('[myPhoneNumber]', 'Hello!', function (err) {
+// 	console.log('this was the error ', err);
+// });
 
 // Instantiating http server 
 var httpServer = http.createServer(function (req, res) {

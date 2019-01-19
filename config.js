@@ -13,6 +13,11 @@ environments.staging = {
   'envName': 'staging',
   'hashingSecret': 'thisIsASecret',
   'maxChecks': 5,
+  'twilio': {
+    'accountSid': 'AC5f55ff7fdbb81a493b56d772864ec47a',
+    'authToken': '34bed61b06bfd6a477191ee9d3c625f9',
+    'fromPhone': '+13239184336',
+  }
 }
 
 // production environment
@@ -22,6 +27,11 @@ environments.production = {
   'envName': 'production',
   'hashingSecret': 'thisIsAlsoASecret',
   'maxChecks': 5,
+  'twilio': {
+    'accountSid': '',
+    'authToken': '',
+    'fromPhone': '',
+  }
 }
 
 // determine which env was passed as a command-line argment
