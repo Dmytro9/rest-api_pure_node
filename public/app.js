@@ -1,7 +1,12 @@
 /**
- * Frontend logic for app
+ * Frontend Logic for Application
  */
 
+// Container for the frontend application
 var app = {};
 
-console.log('Hello console world!');
+// Config
+app.config = {
+  'sessionToken': false
+};
+
