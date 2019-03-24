@@ -213,10 +213,6 @@ input,select,option {
   width: 100%;
 }
 
-input[type="checkbox"] {
-  width: auto;
-}
-
 .checkboxGroup input{
   display: inline-block;
   width: initial;
