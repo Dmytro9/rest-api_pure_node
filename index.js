@@ -1,7 +1,7 @@
 /*
-* Primary file to the API
-*
-**/
+ * Primary file for API
+ *
+ */
 
 // Dependencies
 var server = require('./lib/server');
@@ -12,21 +12,26 @@ var cli = require('./lib/cli');
 var app = {};
 
 // Init function
-app.init = function () {
+app.init = function (callback) {
+
 	// Start the server
 	server.init();
 
 	// Start the workers
-	// workers.init();
+	workers.init();
 
-	// STart the CLI (starts last)
+	// Start the CLI, but make sure it starts last
 	setTimeout(function () {
 		cli.init();
-	}, 500);
+		callback();
+	}, 50);
+
 };
 
-// Execute
-app.init();
+// Self invoking only if required directly
+if (require.main === module) {
+	app.init(function () { });
+}
+
 
 // Export the app
-module.export = app;
