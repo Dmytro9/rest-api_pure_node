@@ -38,8 +38,6 @@ app.init = function (callback) {
 		server.init();
 	}
 
-
-
 };
 
 // Self invoking only if required directly
