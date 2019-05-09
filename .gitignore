@@ -1,1 +1,10 @@
+# vscode
+.vscode
+
+#data
+.logs
+.data
+https
+
+# dependencies
 node_modules
