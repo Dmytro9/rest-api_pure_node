@@ -24,7 +24,7 @@ req.on('data', function (chunk) {
 
 
 // When the message ends, log it out
-req.on('end', function(){
+req.on('end', function () {
     console.log(str);
 });
 
