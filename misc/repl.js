@@ -9,7 +9,7 @@ var repl = require("repl");
 
 // Start the REPL
 repl.start({
-  prompt: ">",
+  prompt: ":",
   eval: function(str) {
     // Evaluation function for incoming inputs
     console.log("At the evaluation stage: ", str);
